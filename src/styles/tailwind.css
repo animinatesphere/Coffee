@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FFF8DC; /* warm cream */
+    --color-foreground: #2F1B14; /* dark espresso */
+    --color-border: #D2B48C; /* warm tan */
+    --color-input: #F5F5DC; /* subtle beige */
+    --color-ring: #8B4513; /* rich coffee brown */
+    
+    /* Card Colors */
+    --color-card: #F5F5DC; /* subtle beige */
+    --color-card-foreground: #2F1B14; /* dark espresso */
+    
+    /* Popover Colors */
+    --color-popover: #FFF8DC; /* warm cream */
+    --color-popover-foreground: #2F1B14; /* dark espresso */
+    
+    /* Muted Colors */
+    --color-muted: #F5F5DC; /* subtle beige */
+    --color-muted-foreground: #8B7355; /* medium brown */
+    
+    /* Primary Colors */
+    --color-primary: #8B4513; /* rich coffee brown */
+    --color-primary-foreground: #FFF8DC; /* warm cream */
+    
+    /* Secondary Colors */
+    --color-secondary: #D2B48C; /* warm tan */
+    --color-secondary-foreground: #2F1B14; /* dark espresso */
+    
+    /* Destructive Colors */
+    --color-destructive: #CD5C5C; /* muted red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #DAA520; /* golden rod */
+    --color-accent-foreground: #2F1B14; /* dark espresso */
+    
+    /* Success Colors */
+    --color-success: #228B22; /* forest green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #FF8C00; /* warm orange */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error Colors */
+    --color-error: #CD5C5C; /* muted red */
+    --color-error-foreground: #FFFFFF; /* white */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-crimson {
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .shadow-coffee-cta {
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+  }
+  
+  .shadow-coffee-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-blur-coffee {
+    backdrop-filter: blur(8px);
+  }
+}
